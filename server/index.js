@@ -1,3 +1,4 @@
+// Library imports
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -22,10 +23,13 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(express.json());
 
+// routes
 app.use("/api/auth", router);
 
+// setting database
 Connection(mongoUrl);
 
+// server running
 try {
   app.listen(port || 8000, () => {
     console.log(`server running on ${hostName}:${port}`);

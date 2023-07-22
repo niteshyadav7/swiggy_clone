@@ -13,7 +13,6 @@ const userSchema = mongoose.Schema({
   password: {
     type: String,
     required: [true, "Must Have Password"],
-    validate: [validator.isStrongPassword, "Must enter strong password"],
   },
 });
 userSchema.pre("save", async function (next) {
