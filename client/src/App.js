@@ -1,9 +1,9 @@
 import Register from "./components/pages/Register";
-// import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
 import Login from "./components/pages/Login";
-import Cards from "./components/pages/Cards";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "./components/body/Header";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Cards />,
+    element: <Header />,
   },
 ]);
 export default router;
