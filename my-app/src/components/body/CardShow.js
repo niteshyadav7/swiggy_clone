@@ -4,13 +4,13 @@ const CardShow = ({ resData }) => {
   return (
     <>
       <div className="">
-        <div className="ml-40 mt-5 p-5 ">
-          <div className="text-3xl font-bold">
+        <div className="ml-20 mt-5 p-5 ">
+          <div className="text-3xl font-bold ">
             Restaurants with online food delivery in Bareilly
           </div>
         </div>
         <div className="mt-5">
-          <ul className="ml-52 flex">
+          <ul className="ml-20 flex">
             <li>
               <button
                 type="button"
