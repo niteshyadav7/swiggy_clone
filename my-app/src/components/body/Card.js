@@ -1,8 +1,10 @@
 const Card = () => {
   return (
     <>
-      <div className="hover:scale-95 scm w-80 inline-block ml-10
-       rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+      <div
+        className="hover:scale-95 scm w-80 inline-block ml-10
+       rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+      >
         <img
           className="rounded-t-2xl "
           src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
@@ -17,7 +19,6 @@ const Card = () => {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-         
         </div>
       </div>
     </>

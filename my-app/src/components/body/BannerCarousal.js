@@ -1,12 +1,12 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import OfferCarousalCard from "./OfferCarousalCard";
+import BannerCarousalCard from "./BannerCarousalCard";
 import ShimmerCar from "../shimmer/carousalShimmer";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 5,
   },
 
   mobile: {
@@ -15,21 +15,19 @@ const responsive = {
   },
 };
 
-const OfferCarousal = ({ resCarousal }) => {
-  
-  if(resCarousal.length==0)return <ShimmerCar />
-  
+const BannerCarousal = ({ resBanner }) => {
+    if(resBanner.length==0) return <ShimmerCar />
   return (
     <div className="ml-20">
-      <div className="text-3xl mt-5 p-4 ml-10 font-bold">Best Offers For you</div>
+      <div className="text-3xl mt-5 p-4 ml-10 font-bold">What's on your mind?</div>
       <Carousel responsive={responsive}>
-        {resCarousal.map((data, id) => (
+        {resBanner.map((data, id) => (
           <div className="ml-10" key={id}>
-            <OfferCarousalCard />
+            <BannerCarousalCard />
           </div>
         ))}
       </Carousel>
     </div>
   );
 };
-export default OfferCarousal;
+export default BannerCarousal;

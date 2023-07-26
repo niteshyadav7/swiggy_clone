@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import OfferCarousalCard from "./OfferCarousalCard";
+import Card from "./Card";
 import ShimmerCar from "../shimmer/carousalShimmer";
 
 const responsive = {
@@ -15,21 +15,21 @@ const responsive = {
   },
 };
 
-const OfferCarousal = ({ resCarousal }) => {
-  
-  if(resCarousal.length==0)return <ShimmerCar />
-  
+const TopRatedRes = ({ resTop }) => {
+  if (resTop.length == 0) return <ShimmerCar />;
   return (
     <div className="ml-20">
-      <div className="text-3xl mt-5 p-4 ml-10 font-bold">Best Offers For you</div>
+      <div className="text-3xl mt-5 p-4 ml-10 font-bold">
+        Top restaurant chains in Bareilly
+      </div>
       <Carousel responsive={responsive}>
-        {resCarousal.map((data, id) => (
+        {resTop.map((data, id) => (
           <div className="ml-10" key={id}>
-            <OfferCarousalCard />
+            <Card />
           </div>
         ))}
       </Carousel>
     </div>
   );
 };
-export default OfferCarousal;
+export default TopRatedRes;
