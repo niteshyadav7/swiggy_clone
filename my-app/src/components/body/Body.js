@@ -28,10 +28,9 @@ const Body = () => {
     );
     setBanner(json.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info)
     setTopRes(json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    console.log(json);
+    // console.log(json);
     // console.log(json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
-  // console.log();
   return (
     <>
       <div className="ml-24 mr-24">

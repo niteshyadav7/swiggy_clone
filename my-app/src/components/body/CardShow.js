@@ -2,7 +2,7 @@ import ShimmerCard from "../shimmer/CardShimmer";
 import Card from "./Card";
 
 const CardShow = ({ resData }) => {
-  if (resData.length == 0) return <ShimmerCard />;
+  if (resData.length === 0) return <ShimmerCard />;
 
   return (
     <>

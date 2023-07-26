@@ -1,22 +1,22 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./Card";
 import ShimmerCar from "../shimmer/carousalShimmer";
+import TopRatedResCard from "./TopRatedResCard";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 4,
   },
 
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
+    items: 2,
   },
 };
 
 const TopRatedRes = ({ resTop }) => {
-  if (resTop.length == 0) return <ShimmerCar />;
+  if (resTop.length === 0) return <ShimmerCar />;
   return (
     <div className="ml-20">
       <div className="text-3xl mt-5 p-4 ml-10 font-bold">
@@ -25,7 +25,7 @@ const TopRatedRes = ({ resTop }) => {
       <Carousel responsive={responsive}>
         {resTop.map((data, id) => (
           <div className="ml-10" key={id}>
-            <Card />
+            <TopRatedResCard data={data} />
           </div>
         ))}
       </Carousel>

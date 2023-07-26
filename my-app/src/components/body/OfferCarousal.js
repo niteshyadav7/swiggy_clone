@@ -16,16 +16,19 @@ const responsive = {
 };
 
 const OfferCarousal = ({ resCarousal }) => {
-  
-  if(resCarousal.length==0)return <ShimmerCar />
-  
+  // console.log(resCarousal[0].imageId);
+
+  if (resCarousal.length === 0) return <ShimmerCar />;
+
   return (
     <div className="ml-20">
-      <div className="text-3xl mt-5 p-4 ml-10 font-bold">Best Offers For you</div>
+      <div className="text-3xl mt-5 p-4 ml-10 font-bold">
+        Best Offers For you
+      </div>
       <Carousel responsive={responsive}>
         {resCarousal.map((data, id) => (
           <div className="ml-10" key={id}>
-            <OfferCarousalCard />
+            <OfferCarousalCard data={data} />
           </div>
         ))}
       </Carousel>

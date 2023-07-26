@@ -1,5 +1,4 @@
 import Register from "./components/pages/Register";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
 import Login from "./components/pages/Login";
 import "react-toastify/dist/ReactToastify.css";
