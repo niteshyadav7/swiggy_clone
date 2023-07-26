@@ -1,25 +1,23 @@
-const Card = () => {
+import { CARD_IMG } from "../utils/mockData";
+import { STAR_URL } from "../utils/mockData";
+
+const Card = ({ data }) => {
+  console.log(data);
   return (
     <>
-      <div
-        className="hover:scale-95 scm w-80 inline-block ml-10
-       rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
-      >
+      <div className="w-60 hover:scale-95 scroll-smooth cursor-pointer">
         <img
-          className="rounded-t-2xl "
-          src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-          alt=""
+          className="rounded-3xl w-60 h-44 "
+          src={CARD_IMG + data?.info?.cloudinaryImageId}
+          alt="banner"
         />
-
-        <div className="p-6">
-          <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-            Card title
-          </h5>
-          <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+        <div className="font-semibold text-lg">{data?.info?.name}</div>
+        <div className="font-medium text-base mt-2">
+          <img className="w-7 mb-1 mr-2   inline" src={STAR_URL} alt="images" />
+          {data?.info?.avgRating}
         </div>
+        <div className="font-light">{data?.info?.cuisines?.join(", ")}</div>
+        <div className="font-light">{data?.info?.areaName}</div>
       </div>
     </>
   );

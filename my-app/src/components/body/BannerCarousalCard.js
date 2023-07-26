@@ -3,7 +3,7 @@ import { BANNER_IMG } from "../utils/mockData";
 const BannerCarousalCard = ({ data }) => {
   return (
     <>
-      <div>
+      <div className="cursor-pointer">
         <img
           className="rounded-full "
           src={BANNER_IMG + data.imageId}

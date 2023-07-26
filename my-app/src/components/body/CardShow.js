@@ -47,10 +47,10 @@ const CardShow = ({ resData }) => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center flex-wrap  ">
+      <div className="ml-14 flex justify-start flex-wrap  ">
         {resData.map((data, id) => (
           <div className="m-8 flex" key={id}>
-            <Card />
+            <Card data={data} />
           </div>
         ))}
       </div>

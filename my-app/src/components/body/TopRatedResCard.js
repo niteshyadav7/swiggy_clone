@@ -1,16 +1,17 @@
 import { CARD_IMG, STAR_URL } from "../utils/mockData";
 
 const TopRatedResCard = ({ data }) => {
-  console.log(data);
+//   console.log(data);
 
   return (
     <>
-      <div className="w-60">
+      <div className="w-60 cursor-pointer">
         <img
-          className="rounded-3xl w-60 h-44 "
+          className="rounded-3xl  w-60 h-40"
           src={CARD_IMG + data?.info?.cloudinaryImageId}
           alt="banner"
         />
+      
         <div className="font-semibold text-lg">{data?.info?.name}</div>
         <div className="font-medium text-base mt-2">
           <img className="w-7 mb-1 mr-2   inline" src={STAR_URL} alt="images" />
