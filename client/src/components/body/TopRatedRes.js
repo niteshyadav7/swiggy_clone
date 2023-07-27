@@ -16,7 +16,7 @@ const responsive = {
 };
 
 const TopRatedRes = ({ resTop }) => {
-  if (resTop.length === 0) return <ShimmerCar />;
+  if (!resTop) return <ShimmerCar />;
   return (
     <div className="ml-20">
       <div className="text-3xl mt-5 p-4 ml-10 font-bold">

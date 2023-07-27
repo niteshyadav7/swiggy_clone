@@ -1,9 +1,11 @@
 import ShimmerCard from "../shimmer/CardShimmer";
 import Card from "./Card";
 
-const CardShow = ({ resData }) => {
-  if (resData.length === 0) return <ShimmerCard />;
-
+const CardShow = ({ resData,setResData }) => {
+  
+  console.log(resData);
+  
+  if (!resData) return <ShimmerCard />;
   return (
     <>
       <div className="">
@@ -16,6 +18,12 @@ const CardShow = ({ resData }) => {
           <ul className="ml-20 flex">
             <li>
               <button
+                onClick={() => {
+                  const filteredList = resData.filter(
+                    (res) => res?.info?.avgRating > 4
+                  );
+                  setResData(filteredList);
+                }}
                 type="button"
                 className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
               >

@@ -1,9 +1,8 @@
 import Register from "./components/pages/Register";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
 import Login from "./components/pages/Login";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./components/body/Header";
+import Body from "./components/body/Body";
 
 const router = createBrowserRouter([
   {
@@ -16,19 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Header />,
+    element: <Body />,
   },
 ]);
 export default router;
-// export default function App() {
-//   return (
-
-//     // <BrowserRouter>
-//     //   <Routes>
-//     //     <Route exact path="/register" element={<Register />} />
-//     //     <Route exact path="/login" element={<Login />} />
-//     //     <Route exact path="/" element={<Cards />} />
-//     //   </Routes>
-//     // </BrowserRouter>
-//   );
-// }
