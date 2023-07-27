@@ -11,3 +11,11 @@ export const CARD_IMG =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
   export const STAR_URL="https://cdn-icons-png.flaticon.com/128/2224/2224638.png"
+  
+  
+  export function filteredData(searchInput, restaurant) {
+    const data = restaurant.filter((res) =>
+      res?.info?.name.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    return data;
+  }

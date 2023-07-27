@@ -16,7 +16,7 @@ const responsive = {
 };
 
 const BannerCarousal = ({ resBanner }) => {
-  if (!resBanner) return <ShimmerCar />;
+  if (resBanner.length===0) return <ShimmerCar />;
   return (
     <div className="ml-20">
       <div className="text-3xl mt-5 p-4 ml-10 font-bold">

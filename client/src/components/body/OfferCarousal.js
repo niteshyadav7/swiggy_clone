@@ -18,7 +18,7 @@ const responsive = {
 const OfferCarousal = ({ resCarousal }) => {
   // console.log(resCarousal[0].imageId);
 
-  if (!resCarousal) return <ShimmerCar />;
+  if (resCarousal.length===0) return <ShimmerCar />;
 
   return (
     <div className="ml-20">

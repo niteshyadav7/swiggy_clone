@@ -3,13 +3,16 @@ import { API_URL } from "../utils/mockData";
 import Header from "./Header";
 
 import CardShow from "./CardShow";
+import useOnline from "../Hooks/useOnline";
 import Footer from "./Footer";
 import OfferCarousal from "./OfferCarousal";
 import BannerCarousal from "./BannerCarousal";
 import TopRatedRes from "./TopRatedRes";
 
 const Body = () => {
-  const [restaurantsCard, setRestaurantsCard] = useState([]);
+  // const [restaurantsCard, setRestaurantsCard] = useState([]);
+  const [restaurant, setRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [carousal, setCarousal] = useState([]);
   const [banner, setBanner] = useState([]);
   const [topRes, setTopRes] = useState([]);
@@ -20,7 +23,10 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(`${API_URL}`);
     const json = await data.json();
-    setRestaurantsCard(
+    setRestaurant(
+      json.data.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestaurant(
       json.data.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setCarousal(
@@ -35,6 +41,11 @@ const Body = () => {
     // console.log(json);
     // console.log(json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
+  const online = useOnline();
+  if (!online) {
+    return <div>offline</div>;
+  }
+
   return (
     <>
       <div className="ml-24 mr-24">
@@ -46,7 +57,12 @@ const Body = () => {
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
         <TopRatedRes resTop={topRes} />
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-        <CardShow resData={restaurantsCard} setResData={setRestaurantsCard}/>
+        <CardShow
+          resData={restaurant}
+          setResData={setRestaurant}
+          resFilter={filteredRestaurant}
+          setResFilter={setFilteredRestaurant}
+        />
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       </div>
       <Footer />
