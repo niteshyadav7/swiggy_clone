@@ -10,12 +10,24 @@ export const BANNER_IMG =
 export const CARD_IMG =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-  export const STAR_URL="https://cdn-icons-png.flaticon.com/128/2224/2224638.png"
-  
-  
-  export function filteredData(searchInput, restaurant) {
-    const data = restaurant.filter((res) =>
-      res?.info?.name.toLowerCase().includes(searchInput.toLowerCase())
-    );
-    return data;
-  }
+export const STAR_URL =
+  "https://cdn-icons-png.flaticon.com/128/2224/2224638.png";
+
+export const OFFER_API =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&collection=83649&offset=0&pageType=COLLECTION&type=rcv2&page_type=DESKTOP_COLLECTION_LISTING";
+
+export function filteredData(searchInput, restaurant) {
+  const data = restaurant.filter((res) =>
+    res?.info?.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+  return data;
+}
+
+// {
+//   path: "/register",
+//   element: <Register />,
+// },
+// {
+//   path: "/login",
+//   element: <Login />,
+// },

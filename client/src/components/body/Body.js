@@ -24,10 +24,10 @@ const Body = () => {
     const data = await fetch(`${API_URL}`);
     const json = await data.json();
     setRestaurant(
-      json.data.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json.data.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setCarousal(
       json.data.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
@@ -49,7 +49,7 @@ const Body = () => {
   return (
     <>
       <div className="ml-24 mr-24">
-        <Header />
+        {/* <Header /> */}
 
         <OfferCarousal resCarousal={carousal} />
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -65,7 +65,7 @@ const Body = () => {
         />
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

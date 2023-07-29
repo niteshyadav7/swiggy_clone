@@ -1,21 +1,17 @@
-import Register from "./components/pages/Register";
-import { createBrowserRouter } from "react-router-dom";
-import Login from "./components/pages/Login";
+import { Outlet } from "react-router-dom";
+import Header from "./components/body/Header";
+import Footer from "./components/body/Footer";
 import "react-toastify/dist/ReactToastify.css";
-import Body from "./components/body/Body";
 
-const router = createBrowserRouter([
-  {
-    path: "/register",
-    element: <Register />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/",
-    element: <Body />,
-  },
-]);
-export default router;
+
+const App = () => {
+ 
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
+export default App;

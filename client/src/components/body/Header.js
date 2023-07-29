@@ -1,7 +1,7 @@
 import useOnline from "../Hooks/useOnline";
 
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
@@ -43,16 +43,18 @@ const Header = () => {
     <div className="z-50">
       <nav className="bg-white dark:bg-gray-900  w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <span className="flex items-center">
-            <img
-              src="https://marketplace.canva.com/EAFi_bPItKY/1/0/1600w/canva-yellow-brown-circle-food-logo-hKhYLA2Kmt4.jpg"
-              className="h-20 rounded-full hover:rotate-180"
-              alt="swiggy  Logo"
-            />
-            <span className=" cursor-pointer self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Hungry Point
+          <Link to="/">
+            <span className="flex items-center">
+              <img
+                src="https://marketplace.canva.com/EAFi_bPItKY/1/0/1600w/canva-yellow-brown-circle-food-logo-hKhYLA2Kmt4.jpg"
+                className="h-20 rounded-full hover:rotate-180"
+                alt="swiggy  Logo"
+              />
+              <span className=" cursor-pointer self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                Hungry Point
+              </span>
             </span>
-          </span>
+          </Link>
           <div className="flex md:order-2">
             <button
               onClick={logOut}
@@ -78,27 +80,32 @@ const Header = () => {
               </li>
 
               <li>
-                <span
-                  className="cursor-pointer block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page"
-                >
-                  Home
-                </span>
+                <Link to="/">
+                  <span className="block py-2 cursor-pointer pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Home
+                  </span>
+                </Link>
               </li>
               <li>
-                <span className="block py-2 cursor-pointer pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  About
-                </span>
+                <Link to="/about">
+                  <span className="block py-2 cursor-pointer pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    About
+                  </span>
+                </Link>
               </li>
               <li>
-                <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  Services
-                </span>
+                <Link to="/service">
+                  <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Services
+                  </span>
+                </Link>
               </li>
               <li>
-                <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  Contact
-                </span>
+                <Link to="/contact">
+                  <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Contact
+                  </span>
+                </Link>
               </li>
               <li>
                 <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">

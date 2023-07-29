@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import BannerCarousalCard from "./BannerCarousalCard";
 import ShimmerCar from "../shimmer/carousalShimmer";
+import { Link } from "react-router-dom";
 
 const responsive = {
   desktop: {
@@ -16,7 +17,7 @@ const responsive = {
 };
 
 const BannerCarousal = ({ resBanner }) => {
-  if (resBanner.length===0) return <ShimmerCar />;
+  if (resBanner.length === 0) return <ShimmerCar />;
   return (
     <div className="ml-20">
       <div className="text-3xl mt-5 p-4 ml-10 font-bold">
@@ -24,9 +25,11 @@ const BannerCarousal = ({ resBanner }) => {
       </div>
       <Carousel responsive={responsive}>
         {resBanner.map((data, id) => (
-          <div className="ml-10" key={id}>
-            <BannerCarousalCard data={data} />
-          </div>
+          <Link to="/innerCard">
+            <div className="ml-10" key={id}>
+              <BannerCarousalCard data={data} />
+            </div>
+          </Link>
         ))}
       </Carousel>
     </div>

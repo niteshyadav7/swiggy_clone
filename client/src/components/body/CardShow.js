@@ -5,7 +5,7 @@ import { filteredData } from "../utils/mockData";
 
 const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
   const [searchInput, setSearchInput] = useState("");
-  console.log(resFilter);
+  // console.log(resFilter);
 
   // console.log(resData);
   const handleChange = (e) => {
@@ -30,7 +30,10 @@ const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
   return (
     <>
       <div className="">
-        <div className="ml-20 mt-5 p-5 ">
+        <div className="ml-20  p-5 ">
+          <h1 className="text-3xl font-bold mb-5 text-green-700">
+            Number of Restaurants Available {resFilter.length}
+          </h1>
           <div className="text-3xl font-bold ">
             Restaurants with online food delivery in Bareilly
           </div>
@@ -41,7 +44,7 @@ const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
               <button
                 onClick={() => {
                   const filteredList = resData.filter(
-                    (res) => res?.info?.avgRating > 4
+                    (res) => res?.info?.avgRating > 4.2
                   );
                   setResFilter(filteredList);
                 }}
@@ -55,7 +58,7 @@ const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
               <button
                 onClick={() => {
                   const filteredList = resData.filter(
-                    (res) => res?.info?.sla?.deliveryTime < 30
+                    (res) => res?.info?.sla?.deliveryTime < 26
                   );
                   setResFilter(filteredList);
                 }}
