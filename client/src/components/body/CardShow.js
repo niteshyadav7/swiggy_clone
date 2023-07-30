@@ -2,6 +2,7 @@ import { useState } from "react";
 import ShimmerCard from "../shimmer/CardShimmer";
 import Card from "./Card";
 import { filteredData } from "../utils/mockData";
+import { Link } from "react-router-dom";
 
 const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -87,11 +88,11 @@ const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
           </ul>
         </div>
       </div>
-      <div className="ml-14 flex justify-start flex-wrap  ">
+      <div className="ml-14 flex justify-evenly flex-wrap  ">
         {resFilter.map((data, id) => (
-          <div className="m-8 flex" key={id}>
+          <Link key={data?.info?.id} to={"/menu/" + data?.info?.id}>
             <Card data={data} />
-          </div>
+          </Link>
         ))}
       </div>
     </>

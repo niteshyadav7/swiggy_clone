@@ -4,7 +4,7 @@ import { STAR_URL } from "../utils/mockData";
 const Card = ({ data }) => {
   // console.log(data);
   return (
-    <>
+    <div className="mt-10 ml-10 mr-10">
       <div className="w-60 hover:scale-95 scroll-smooth cursor-pointer">
         <img
           className="rounded-3xl w-60 h-44 "
@@ -19,7 +19,7 @@ const Card = ({ data }) => {
         <div className="font-light">{data?.info?.cuisines?.join(", ")}</div>
         <div className="font-light">{data?.info?.areaName}</div>
       </div>
-    </>
+    </div>
   );
 };
 export default Card;

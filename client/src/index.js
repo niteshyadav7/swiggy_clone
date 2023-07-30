@@ -11,16 +11,15 @@ import Contact from "./components/body/Contact";
 import Service from "./components/body/Services";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
-import CardShow from "./components/body/CardShow";
 import InnerCardShow from "./components/Offers/InnerCardShow";
-
-
-
+import ErrorElement from "./components/body/ErrorElement";
+import RestaurantMenu from "./components/menu/RestaurantMenu";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorElement />,
     children: [
       {
         path: "/",
@@ -41,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/innerCard",
         element: <InnerCardShow />,
+      },
+      {
+        path: "/menu/:id",
+        element: <RestaurantMenu />,
       },
     ],
   },
