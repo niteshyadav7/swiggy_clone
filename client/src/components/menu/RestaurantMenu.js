@@ -27,10 +27,10 @@ const RestaurantMenu = () => {
       json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
         ?.card?.itemCards
     );
-    console.log(
-      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-        ?.card?.itemCards
-    );
+    // console.log(
+    //   json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+        // ?.card?.itemCards
+    // );
   };
 
   if (menu.length === 0) return <ShimmerCard />;

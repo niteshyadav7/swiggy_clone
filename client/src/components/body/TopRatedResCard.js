@@ -5,7 +5,7 @@ const TopRatedResCard = ({ data }) => {
 
   return (
     <>
-      <div className="w-60 cursor-pointer">
+      <div className="w-60 ">
         <img
           className="rounded-3xl  w-60 h-40"
           src={CARD_IMG + data?.info?.cloudinaryImageId}

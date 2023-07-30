@@ -1,6 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../redux/cartSlice";
+
+
+
 
 const Items = ({ data }) => {
+  
+  const dispatch = useDispatch();
+
+  const handleAddItem = (data) => {
+    // Dispatch an action
+    dispatch(addItem(data));
+  };
+  
+  
+  console.log(data);
   return (
     <div className="mt-10 ml-10 mr-10">
       <div className="w-60 ">
@@ -10,9 +25,9 @@ const Items = ({ data }) => {
           alt="banner"
         />
         <div className="font-semibold text-lg">{data?.name}</div>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">
-  ADD+
-</button>
+        <button onClick={() => handleAddItem(data)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">
+          ADD+
+        </button>
       </div>
     </div>
   );
