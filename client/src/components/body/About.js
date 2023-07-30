@@ -1,95 +1,116 @@
 const About = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold">About Page</h1>
+    <div className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
+          About Us
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700">
+            Welcome to Hungry Point, your ultimate destination for delicious and
+            convenient food delivery. At Hungry Point, we believe that everyone
+            deserves a delightful dining experience without the hassle of
+            cooking or going out.
+          </p>
+          <section className="mb-8">
+            <h2 className="text-2xl text-red-600 text-center font-medium mb-2 mt-6">
+              What We Offer
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-6">
+                <img
+                  src="https://images.unsplash.com/photo-1528451635828-f28cd48439a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                  alt="Delicious Cuisine"
+                  className="rounded-full w-48 h-48 object-cover mb-6"
+                />
+                <h3 className="text-xl text-gray-900 mb-2 text-center">
+                  Delicious Cuisine
+                </h3>
+                <p className="text-gray-700 text-center">
+                  Explore our diverse menu offering a wide range of delicious
+                  cuisine from around the world. From comfort food to exotic
+                  flavors, we have something for everyone.
+                </p>
+              </div>
+              <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-6">
+                <img
+                  src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80"
+                  alt="Customizable Options"
+                  className="rounded-full w-48 h-48 object-cover mb-6"
+                />
+                <h3 className="text-xl text-gray-900 mb-2 text-center">
+                  Customizable Options
+                </h3>
+                <p className="text-gray-700 text-center">
+                  Personalize your order to suit your preferences. From dietary
+                  requirements to specific ingredient choices, we ensure a
+                  tailored dining experience.
+                </p>
+              </div>
+              <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-6">
+                <img
+                  src="https://images.unsplash.com/photo-1585759071429-1646f76ab8c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                  alt="Convenient Delivery"
+                  className="rounded-full w-48 h-48 object-cover mb-6"
+                />
+                <h3 className="text-xl text-gray-900 mb-2 text-center">
+                  Convenient Delivery
+                </h3>
+                <p className="text-gray-700 text-center">
+                  Enjoy the ease of food delivery right to your doorstep. Our
+                  efficient delivery system ensures that your food arrives fresh
+                  and on time, ready to be enjoyed.
+                </p>
+              </div>
+            </div>
+          </section>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2019/08/1280-Indian-food.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://img.freepik.com/free-photo/flat-lay-batch-cooking-composition_23-2148765597.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/201902/swiggy_660_111418070407_021219055857.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://static.toiimg.com/thumb/msid-66145888,width-400,resizemode-4/66145888.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://static.toiimg.com/thumb/msid-66145888,width-400,resizemode-4/66145888.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://img.freepik.com/free-photo/flat-lay-batch-cooking-composition_23-2148765597.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWiDpupiPmVEbMhjHSukH4dPiQ8DLYzAQuP7TNS_owFw&s"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWiDpupiPmVEbMhjHSukH4dPiQ8DLYzAQuP7TNS_owFw&s"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://i.gadgets360cdn.com/large/swiggy_food_app_1493725122164.png"
-            alt=""
-          />
+          <section className="mb-8 space-y-10">
+            <h2 className="text-2xl text-red-600 text-center font-medium mb-2 mt-6">
+              Who We Are
+            </h2>
+            <p className="text-lg text-gray-700 mt-4 mb-4">
+              Our dedicated team of chefs and delivery experts work tirelessly
+              to bring you a wide range of culinary delights right to your
+              doorstep. We carefully curate our menu to offer a diverse
+              selection of cuisines, from traditional favorites to international
+              specialties. Whether you're craving a comforting bowl of pasta, a
+              sizzling plate of sushi, or a refreshing salad, we've got you
+              covered.
+            </p>
+            <div className="flex flex-col md:flex-row items-center md:items-start bg-white shadow-md rounded-lg">
+              <img
+                src="https://images.unsplash.com/photo-1616734755909-bb016ce64930?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                alt="Team"
+                className="rounded-full w-40 h-40 object-cover m-2 md:mr-8"
+              />
+              <div>
+                <h3 className="text-xl text-gray-900 mb-2 max-md:text-center">
+                  A Passionate Team
+                </h3>
+                <p className="text-gray-700">
+                  At Hungry Point, we have assembled a team of passionate food
+                  enthusiasts who are dedicated to delivering exceptional
+                  culinary experiences. Our team consists of talented chefs,
+                  expert food handlers, and customer-oriented professionals who
+                  work together to ensure your satisfaction. We believe that
+                  good food has the power to bring people together and make
+                  every meal a memorable one.
+                </p>
+              </div>
+            </div>
+            <p className="text-lg text-gray-700 mt-3">
+              With Hungry Point, ordering your favorite meals is as easy as a
+              few clicks. Simply browse our menu, select your desired dishes,
+              customize them to your preferences, and place your order. Our
+              efficient delivery system ensures that your food arrives fresh and
+              piping hot, ready to satisfy your cravings.
+            </p>
+          </section>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
 export default About;

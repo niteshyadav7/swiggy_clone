@@ -24,7 +24,7 @@ const BannerCarousal = ({ resBanner }) => {
         What's on your mind?
       </div>
       <Carousel responsive={responsive}>
-        {resBanner.map((data, id) => (
+        {resBanner?.map((data, id) => (
           <Link to="/innerCard" key={id}>
             <div className="ml-10" >
               <BannerCarousalCard data={data} />

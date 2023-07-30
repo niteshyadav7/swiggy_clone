@@ -24,19 +24,19 @@ const Body = () => {
     const data = await fetch(`${API_URL}`);
     const json = await data.json();
     setRestaurant(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setCarousal(
-      json.data.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
+      json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
     );
     setBanner(
-      json.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info
     );
     setTopRes(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     // console.log(json);
     // console.log(json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);

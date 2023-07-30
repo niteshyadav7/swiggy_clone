@@ -4,6 +4,7 @@ import { STAR_URL } from "../utils/mockData";
 const Card = ({ data }) => {
   // console.log(data);
   return (
+    
     <div className="mt-10 ml-10 mr-10">
       <div className="w-60 hover:scale-95 scroll-smooth cursor-pointer">
         <img

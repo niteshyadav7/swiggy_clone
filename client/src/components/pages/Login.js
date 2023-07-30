@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { ToastContainer, toast } from "react-toastify";
+import Decor from "./Decor";
+
 
 function Login() {
   const [cookies] = useCookies([]);
@@ -43,6 +45,8 @@ function Login() {
   };
   return (
     <>
+    <Decor />
+    <div id="login" className=" w-full ">
       <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -111,6 +115,7 @@ function Login() {
           </div>
         </div>
       </section>
+    </div>
     </>
   );
 }

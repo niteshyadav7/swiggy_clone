@@ -33,7 +33,7 @@ const Cart = () => {
                   alt="img"
                   src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/${data?.imageId}`}
                 />
-                <span className="text-center text-lg font-semibold text-red-600">{data?.name}</span>
+                <span className="text-center text-lg font-semibold text-red-600 mb-20">{data?.name}</span>
               </span>
             );
           })}

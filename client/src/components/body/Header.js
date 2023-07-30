@@ -7,10 +7,9 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { useSelector } from "react-redux";
 
-
 const Header = () => {
   const online = useOnline();
-  
+
   const cartItems = useSelector((store) => store.cart.items);
 
   const navigate = useNavigate();
@@ -79,7 +78,9 @@ const Header = () => {
                   className="cursor-pointer block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 mr-20"
                   aria-current="page"
                 >
-                  {online ? "✅ Online" : "🛑 Offline"}
+                  <span className="animate-pulse font-bold px-1 bg-white rounded-full">
+                    {online ? "🔴 live" : "❗offline"}
+                  </span>
                 </span>
               </li>
 
