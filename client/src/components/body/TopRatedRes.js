@@ -16,11 +16,11 @@ const responsive = {
 };
 
 const TopRatedRes = ({ resTop }) => {
-  if (resTop.length===0) return <ShimmerCar />;
+  if (resTop.length === 0) return <ShimmerCar />;
   return (
     <div className="ml-20">
       <div className="text-3xl mt-5 p-4 ml-10 font-bold">
-        Top restaurant chains in Bareilly
+        Top restaurant chains in Banglore
       </div>
       <Carousel responsive={responsive}>
         {resTop.map((data, id) => (

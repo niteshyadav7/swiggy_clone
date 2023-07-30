@@ -36,27 +36,31 @@ const RestaurantMenu = () => {
   if (menu.length === 0) return <ShimmerCard />;
 
   return (
-    <>
-      <div className="flex  justify-between m-10">
+    <div className="mb-10">
+      <div className="m-10 text-center ">
+        <div className="flex justify-center">
         <img
           className="rounded-2xl w-80 h-80"
           src={CARD_IMG + cloudinaryImageId}
           alt="img"
         />
+        </div>
         <div className="m-20 ">
           <div className="font-bold text-2xl"> {name}</div>
           <div className="font-bold text-lg">⭐{avgRating}</div>
         </div>
       </div>
-      <div className="text-center text-3xl font-bold">FOOD LIST</div>
-      <div>
-        {list.map((data, id) => (
-          <div key={id}>
-            <Items data={data?.card?.info}/>
-          </div>
-        ))}
+      <div className="mt-20 border-2">
+        <div className="text-center text-3xl font-bold">FOOD LIST</div>
+        <div className="ml-5 mr-5 flex justify-evenly flex-wrap  ">
+          {list.map((data, id) => (
+            <div key={id}>
+              <Items data={data?.card?.info} />
+            </div>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

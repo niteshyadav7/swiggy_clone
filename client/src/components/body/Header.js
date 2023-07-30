@@ -5,9 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import { useSelector } from "react-redux";
+
 
 const Header = () => {
   const online = useOnline();
+  
+  const cartItems = useSelector((store) => store.cart.items);
 
   const navigate = useNavigate();
   const [cookies, setCookie, removeCookie] = useCookies([]);
@@ -108,9 +112,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  Cart
-                </span>
+                <Link to="/cart">
+                  <span className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Cart-({cartItems.length} items)
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>

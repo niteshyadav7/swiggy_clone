@@ -14,6 +14,7 @@ import Register from "./components/pages/Register";
 import InnerCardShow from "./components/Offers/InnerCardShow";
 import ErrorElement from "./components/body/ErrorElement";
 import RestaurantMenu from "./components/menu/RestaurantMenu";
+import Cart from "./components/body/Cart";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
       {
         path: "/menu/:id",
         element: <RestaurantMenu />,
+      },
+
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

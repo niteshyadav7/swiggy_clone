@@ -36,7 +36,7 @@ const CardShow = ({ resData, setResData, resFilter, setResFilter }) => {
             Number of Restaurants Available {resFilter.length}
           </h1>
           <div className="text-3xl font-bold ">
-            Restaurants with online food delivery in Bareilly
+            Restaurants with online food delivery in Banglore
           </div>
         </div>
         <div className="mt-5">
