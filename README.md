@@ -55,4 +55,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 Enjoy exploring SwiggyClone and experimenting with Swiggy API integration and JWT authentication! Feel free to contact us for any questions or suggestions.
 
-[Demo Link](https://drive.google.com/file/d/1-XKNIN0zddNU3LHWtqfOtVOmGujOSC_F/view?usp=sharing)(#) | [Nitesh Yadav](#) | [Contact Us](#)
+[Demo Link](https://drive.google.com/file/d/1-XKNIN0zddNU3LHWtqfOtVOmGujOSC_F/view?usp=sharing) | [Author](https://www.linkedin.com/in/nitesh7yadav/) 
